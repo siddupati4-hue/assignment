@@ -1,21 +1,14 @@
-
 starting_salary = float(input("Enter the starting salary: "))
-
-
 total_cost = 1000000
 down_payment = 0.25 * total_cost
 annual_return = 0.04
 semi_annual_raise = 0.07
 months = 36
-
-
 low = 0
 high = 10000
 epsilon = 100
 steps = 0
 best_rate = None
-
-
 def calculate_savings(rate):
     current_savings = 0
     annual_salary = starting_salary
@@ -30,7 +23,6 @@ def calculate_savings(rate):
             annual_salary += annual_salary * semi_annual_raise
 
     return current_savings
-
 
 if calculate_savings(high) < down_payment:
     print("It is not possible to pay the down payment in three years.")
